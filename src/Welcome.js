@@ -62,7 +62,7 @@ const osmtiles = {
   }]
 };
 const URL = (process.env.NODE_ENV === 'development' ? Constants.DEV_URL : Constants.PRD_URL);
-const defualtURL = "/api/covid19";
+const defualtURL = "/data/COVID19_NZ.json";
 
 // Set your mapbox access token here
 const MAPBOX_ACCESS_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
@@ -89,7 +89,7 @@ export default class Welcome extends React.Component {
     const init = {
       longitude: -1.6362,
       latitude: 53.8321,
-      zoom: 7,
+      zoom: 5,
     }
     const param = getParamsFromSearch(props.location.search);
     if (param) {
@@ -104,7 +104,7 @@ export default class Welcome extends React.Component {
     }
 
     this.state = {
-      layerStyle: 'scatterplot',
+      layerStyle: 'heatmap',
       column: 'TotalCases',
       loading: true,
       layers: [],

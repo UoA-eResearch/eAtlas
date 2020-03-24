@@ -6,8 +6,8 @@ function define(name, value) {
 }
 
 // TODO: change to domain name 
-define("PRD_URL", 'http://eatlas.geoplumber.com');
-define("DEV_URL", 'http://localhost:8000');
+define("PRD_URL", 'https://uoa-eresearch.github.io/eAtlas');
+define("DEV_URL", '');
 define("UI_LIST", [
   "checkbox",
   "radio",
